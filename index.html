@@ -23,9 +23,10 @@
       flex-direction: column;
       text-align: center;
       padding: 20px;
+      cursor: pointer;
+      transition: opacity 1s ease;
     }
 
-    /* ARABIC */
     .bismillah {
       font-family: 'Amiri', serif;
       font-size: clamp(50px, 7vw, 90px);
@@ -34,14 +35,12 @@
       color: #000;
     }
 
-    /* TITLE */
     .cover h1 {
       font-family: 'Great Vibes', cursive;
       font-size: clamp(80px, 12vw, 150px);
       margin: 0;
     }
 
-    /* INVITE TEXT */
     .invite-line {
       font-family: 'Cinzel', serif;
       font-size: clamp(28px, 4vw, 50px);
@@ -49,12 +48,10 @@
       color: #000;
     }
 
-    /* CLICK TO OPEN */
     .click-open {
       font-family: 'Cinzel', serif;
       font-size: clamp(22px, 3vw, 40px);
       margin-top: 35px;
-      letter-spacing: 2px;
       opacity: 0.8;
     }
 
@@ -98,8 +95,8 @@
 
 <body>
 
-<!-- COVER -->
-<div class="cover">
+<!-- COVER (CLICK ENABLED) -->
+<div class="cover" id="cover" onclick="openInvite()">
 
   <div class="bismillah">
     اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
@@ -118,7 +115,7 @@
 </div>
 
 <!-- INVITATION -->
-<div class="invitation">
+<div class="invitation" id="invite">
   <div class="card">
     <h2>Wedding Invitation</h2>
     <p>Together with their families</p>
@@ -132,6 +129,17 @@
     <p class="details">Venue: Your Wedding Hall</p>
   </div>
 </div>
+
+<script>
+  function openInvite() {
+    document.getElementById("cover").style.opacity = "0";
+
+    setTimeout(() => {
+      document.getElementById("cover").style.display = "none";
+      document.getElementById("invite").style.display = "flex";
+    }, 800);
+  }
+</script>
 
 </body>
 </html>
