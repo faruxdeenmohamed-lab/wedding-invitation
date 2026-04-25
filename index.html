@@ -12,14 +12,6 @@
       font-family: Georgia, serif;
     }
 
-    /* LOGO SVG (kept for optional use) */
-    .logo-svg {
-      width: clamp(120px, 18vw, 220px);
-      height: auto;
-      margin-bottom: 15px;
-      display: block;
-    }
-
     /* COVER */
     .cover {
       height: 100vh;
@@ -33,7 +25,6 @@
       transition: opacity 1s ease;
       text-align: center;
       padding: 20px;
-      position: relative;
     }
 
     /* ARABIC */
@@ -52,26 +43,13 @@
       margin: 0;
     }
 
-    /* NO LOOP TICKER */
+    /* STATIC TEXT (NO ANIMATION) */
     .invite-line {
       font-family: 'Cinzel', serif;
       font-size: clamp(16px, 2.5vw, 26px);
       margin-top: 15px;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 100%;
-      max-width: 90%;
-    }
-
-    .invite-line span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scrollOnce 6s linear forwards;
-    }
-
-    @keyframes scrollOnce {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      color: #000;
+      text-align: center;
     }
 
     /* CLICK TEXT */
@@ -140,7 +118,7 @@
   <h1>Wedding Invitation</h1>
 
   <div class="invite-line">
-    <span>YOU ARE CORDIALLY INVITED</span>
+    YOU ARE CORDIALLY INVITED
   </div>
 
   <p>Click to Open</p>
