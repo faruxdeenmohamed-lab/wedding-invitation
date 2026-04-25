@@ -12,7 +12,7 @@
       font-family: Georgia, serif;
     }
 
-    /* COVER PAGE */
+    /* COVER */
     .cover {
       height: 100vh;
       background: url('images/cover.jpg') no-repeat center center;
@@ -87,6 +87,30 @@
       height: 100%;
       object-fit: cover;
     }
+
+    /* NAME OVER IMAGE */
+    .name-overlay {
+      position: absolute;
+      z-index: 2;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      font-family: 'Great Vibes', cursive;
+      font-size: 70px;
+      color: white;
+
+      text-align: center;
+      text-shadow: 0 5px 20px rgba(0,0,0,0.7);
+
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
   </style>
 </head>
 
@@ -111,9 +135,15 @@
 
 </div>
 
-<!-- INSIDE (IMAGE ONLY) -->
+<!-- INSIDE -->
 <div class="invitation" id="invite">
+
   <img src="images/inside.jpg" class="inside-img">
+
+  <div class="name-overlay">
+    Anas ❤️ Simama
+  </div>
+
 </div>
 
 <script>
