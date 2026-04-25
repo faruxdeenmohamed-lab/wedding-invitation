@@ -12,16 +12,18 @@
       font-family: Georgia, serif;
     }
 
-    /* COVER */
+    /* COVER PAGE */
     .cover {
       height: 100vh;
       background: url('images/cover.jpg') no-repeat center center;
       background-size: cover;
+
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       text-align: center;
+
       padding: 20px;
       cursor: pointer;
       transition: opacity 1s ease;
@@ -55,10 +57,11 @@
       opacity: 0.8;
     }
 
-    /* INVITATION BACKGROUND */
+    /* INSIDE PAGE */
     .invitation {
       display: none;
       height: 100vh;
+
       justify-content: center;
       align-items: center;
       flex-direction: column;
@@ -66,6 +69,7 @@
 
       background: url('images/inside.jpg') no-repeat center center;
       background-size: cover;
+      background-position: center;
 
       position: relative;
 
@@ -74,23 +78,12 @@
       transition: all 1s ease;
     }
 
-    /* DARK + WATERCOLOR FEEL */
+    /* DARK OVERLAY */
     .invitation::before {
       content: "";
       position: absolute;
       inset: 0;
       background: rgba(0, 0, 0, 0.45);
-    }
-
-    /* SOFT WATERCOLOR LAYER */
-    .invitation::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left,
-        rgba(255,255,255,0.25),
-        transparent 60%);
-      mix-blend-mode: overlay;
     }
 
     .invitation.show {
@@ -99,13 +92,14 @@
       transform: scale(1);
     }
 
-    /* CONTENT (NO CARD) */
+    /* CONTENT */
     .content {
       position: relative;
       z-index: 2;
       color: #fff;
+      text-align: center;
       padding: 20px;
-      animation: fadeIn 2s ease;
+      animation: fadeIn 1.5s ease;
     }
 
     @keyframes fadeIn {
@@ -133,11 +127,6 @@
       margin: 10px 0;
       text-shadow: 0 3px 10px rgba(0,0,0,0.5);
     }
-
-    .content p {
-      font-size: 24px;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
-    }
   </style>
 </head>
 
@@ -162,7 +151,7 @@
 
 </div>
 
-<!-- INVITATION -->
+<!-- INSIDE -->
 <div class="invitation" id="invite">
   <div class="content">
     <h2>Wedding Invitation</h2>
