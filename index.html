@@ -12,7 +12,7 @@
       font-family: Georgia, serif;
     }
 
-    /* COVER PAGE */
+    /* COVER */
     .cover {
       height: 100vh;
       background: url('images/cover.jpg') no-repeat center center;
@@ -61,29 +61,18 @@
     .invitation {
       display: none;
       height: 100vh;
+      width: 100%;
 
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      text-align: center;
-
-      background: url('images/inside.jpg') no-repeat center center;
-      background-size: cover;
-      background-position: center;
 
       position: relative;
+      background: #000;
 
       opacity: 0;
-      transform: scale(0.8);
+      transform: scale(0.9);
       transition: all 1s ease;
-    }
-
-    /* DARK OVERLAY */
-    .invitation::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
     }
 
     .invitation.show {
@@ -92,10 +81,28 @@
       transform: scale(1);
     }
 
-    /* CONTENT */
+    /* MAIN IMAGE */
+    .inside-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* DARK OVERLAY */
+    .invitation::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.40);
+      z-index: 2;
+    }
+
+    /* CONTENT ON TOP */
     .content {
       position: relative;
-      z-index: 2;
+      z-index: 3;
       color: #fff;
       text-align: center;
       padding: 20px;
@@ -153,6 +160,9 @@
 
 <!-- INSIDE -->
 <div class="invitation" id="invite">
+
+  <img src="images/inside.jpg" class="inside-img">
+
   <div class="content">
     <h2>Wedding Invitation</h2>
     <p>Together with their families</p>
@@ -165,6 +175,7 @@
     <p class="details">Time: 6:00 PM</p>
     <p class="details">Venue: Your Wedding Hall</p>
   </div>
+
 </div>
 
 <script>
