@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First Website</title>
-</head>
-<body style="text-align:center; font-family:Arial;">
+  <title>Wedding Invitation</title>
 
-  <h1>Welcome to My Website</h1>
-  <p>This is my first website 🎉</p>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      text-align: center;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+
+    .cover, .invitation {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .cover {
+      background: #b76e79;
+      color: white;
+      cursor: pointer;
+    }
+
+    .cover h1 {
+      font-size: 30px;
+    }
+
+    .invitation {
+      display: none;
+    }
+
+    .card {
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      max-width: 500px;
+    }
+
+    .names {
+      font-size: 26px;
+      margin: 20px 0;
+    }
+
+    .details {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- COVER SCREEN -->
+<div class="cover" onclick="openInvite()">
+  <h1>💌 Wedding Invitation</h1>
+  <p>Click to Open</p>
+</div>
+
+<!-- INVITATION -->
+<div class="invitation" id="invite">
+  <div class="card">
+    <h2>Wedding Invitation 💍</h2>
+    <p>Together with their families</p>
+
+    <div class="names">
+      Anas ❤️ [Bride Name]
+    </div>
+
+    <p class="details">Date: 10 July 2026</p>
+    <p class="details">Time: 6:00 PM</p>
+    <p class="details">Venue: Your Wedding Hall</p>
+  </div>
+</div>
+
+<script>
+  function openInvite() {
+    document.querySelector(".cover").style.display = "none";
+    document.getElementById("invite").style.display = "flex";
+  }
+</script>
 
 </body>
 </html>
