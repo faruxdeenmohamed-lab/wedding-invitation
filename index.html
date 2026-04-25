@@ -45,30 +45,36 @@
       color: black;
     }
 
-    /* Ticker */
+    /* TICKER */
     .ticker {
       width: 100%;
       overflow: hidden;
-      margin-top: 8px;
+      margin-top: 10px;
+      position: relative;
     }
 
-    .ticker span {
-      display: inline-block;
-      white-space: nowrap;
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: scrollText 10s linear infinite;
+    }
+
+    .ticker-track span {
       font-family: 'Cinzel', serif;
       font-size: clamp(20px, 3vw, 32px);
       letter-spacing: 3px;
       font-weight: 600;
       color: black;
-      animation: scrollText 10s linear infinite;
+      white-space: nowrap;
+      padding-right: 50px;
     }
 
     @keyframes scrollText {
       0% {
-        transform: translateX(100%);
+        transform: translateX(0);
       }
       100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
     }
 
@@ -140,9 +146,12 @@
 
   <h1>Wedding Invitation</h1>
 
-  <!-- TICKER LINE -->
+  <!-- FIXED TICKER -->
   <div class="ticker">
-    <span>YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED •</span>
+    <div class="ticker-track">
+      <span>YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED •</span>
+      <span>YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED •</span>
+    </div>
   </div>
 
   <p>Click to Open</p>
