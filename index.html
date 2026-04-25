@@ -62,22 +62,40 @@
       justify-content: center;
       align-items: center;
       background: #f4f4f4;
+
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 1s ease;
     }
 
+    .invitation.show {
+      display: flex;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* GLASS CARD */
     .card {
-      background: white;
-      padding: 40px;
-      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      padding: 45px;
+      border-radius: 22px;
       text-align: center;
-      max-width: 600px;
+
+      max-width: 650px;
       width: 90%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
     }
 
     .card h2 {
       font-family: 'Great Vibes', cursive;
       font-size: 60px;
       color: #b76e79;
+      margin: 0;
     }
 
     .names {
@@ -95,7 +113,7 @@
 
 <body>
 
-<!-- COVER (CLICK ENABLED) -->
+<!-- COVER -->
 <div class="cover" id="cover" onclick="openInvite()">
 
   <div class="bismillah">
@@ -136,7 +154,13 @@
 
     setTimeout(() => {
       document.getElementById("cover").style.display = "none";
-      document.getElementById("invite").style.display = "flex";
+      let invite = document.getElementById("invite");
+      invite.style.display = "flex";
+
+      setTimeout(() => {
+        invite.classList.add("show");
+      }, 50);
+
     }, 800);
   }
 </script>
