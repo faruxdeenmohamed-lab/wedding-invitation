@@ -12,7 +12,7 @@
       font-family: Georgia, serif;
     }
 
-    /* COVER */
+    /* COVER PAGE */
     .cover {
       height: 100vh;
       background: url('images/cover.jpg') no-repeat center center;
@@ -65,7 +65,6 @@
 
       justify-content: center;
       align-items: center;
-      flex-direction: column;
 
       position: relative;
       background: #000;
@@ -81,58 +80,12 @@
       transform: scale(1);
     }
 
-    /* MAIN IMAGE */
+    /* FULL IMAGE */
     .inside-img {
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: 1;
-    }
-
-    /* DARK OVERLAY */
-    .invitation::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.40);
-      z-index: 2;
-    }
-
-    /* CONTENT ON TOP */
-    .content {
-      position: relative;
-      z-index: 3;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      animation: fadeIn 1.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .content h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 75px;
-      color: #f5c6d0;
-      margin: 0;
-      text-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    }
-
-    .names {
-      font-family: 'Great Vibes', cursive;
-      font-size: 55px;
-      margin: 25px 0;
-      text-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    }
-
-    .details {
-      font-size: 28px;
-      margin: 10px 0;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -158,24 +111,9 @@
 
 </div>
 
-<!-- INSIDE -->
+<!-- INSIDE (IMAGE ONLY) -->
 <div class="invitation" id="invite">
-
   <img src="images/inside.jpg" class="inside-img">
-
-  <div class="content">
-    <h2>Wedding Invitation</h2>
-    <p>Together with their families</p>
-
-    <div class="names">
-      Anas ❤️ Bride Name
-    </div>
-
-    <p class="details">Date: 10 July 2026</p>
-    <p class="details">Time: 6:00 PM</p>
-    <p class="details">Venue: Your Wedding Hall</p>
-  </div>
-
 </div>
 
 <script>
