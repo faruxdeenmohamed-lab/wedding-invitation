@@ -45,16 +45,31 @@
       color: black;
     }
 
-    /* Invite line */
-    .invite-line {
+    /* Ticker */
+    .ticker {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .ticker span {
+      display: inline-block;
+      white-space: nowrap;
       font-family: 'Cinzel', serif;
       font-size: clamp(20px, 3vw, 32px);
       letter-spacing: 3px;
-      margin-top: 8px;
-      color: black;
       font-weight: 600;
-      text-transform: uppercase;
-      opacity: 0.9;
+      color: black;
+      animation: scrollText 10s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     /* Click text */
@@ -113,6 +128,7 @@
   </style>
 
 </head>
+
 <body>
 
 <!-- COVER -->
@@ -124,8 +140,9 @@
 
   <h1>Wedding Invitation</h1>
 
-  <div class="invite-line">
-    YOU ARE CORDIALLY INVITED
+  <!-- TICKER LINE -->
+  <div class="ticker">
+    <span>YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED • YOU ARE CORDIALLY INVITED •</span>
   </div>
 
   <p>Click to Open</p>
