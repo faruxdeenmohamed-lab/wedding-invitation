@@ -12,7 +12,7 @@
       font-family: Georgia, serif;
     }
 
-    /* COVER PAGE */
+    /* COVER */
     .cover {
       height: 100vh;
       background: url('images/cover.jpg') no-repeat center center;
@@ -57,7 +57,7 @@
       opacity: 0.8;
     }
 
-    /* INSIDE PAGE */
+    /* INSIDE */
     .invitation {
       display: none;
       height: 100vh;
@@ -80,7 +80,6 @@
       transform: scale(1);
     }
 
-    /* FULL IMAGE */
     .inside-img {
       position: absolute;
       width: 100%;
@@ -101,8 +100,6 @@
       font-family: 'Amiri', serif;
       font-size: clamp(45px, 5vw, 70px);
       color: #000;
-
-      z-index: 2;
     }
 
     .english-line {
@@ -125,13 +122,11 @@
       color: #000;
     }
 
-    /* WEDDING OF */
     .wedding-of {
       margin-top: 35px;
 
       font-family: 'Great Vibes', cursive;
       font-size: clamp(45px, 6vw, 85px);
-      font-weight: bold;
 
       color: #000;
     }
@@ -141,17 +136,25 @@
       margin: 0 20px;
     }
 
-    /* NAMES */
+    /* ⭐ BIG ANIMATED NAMES */
     .names {
-      margin-top: 25px;
+      margin-top: 35px;
 
-      font-size: clamp(28px, 4vw, 55px);
-      line-height: 1.4;
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(45px, 7vw, 100px); /* BIGGER */
+      line-height: 1.3;
 
       text-align: center;
       color: #000;
 
-      font-family: 'Great Vibes', cursive;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.5s ease;
+    }
+
+    .names.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -220,6 +223,12 @@
 
       setTimeout(() => {
         invite.classList.add("show");
+
+        // 🎯 animate names
+        setTimeout(() => {
+          document.querySelector(".names").classList.add("show");
+        }, 800);
+
       }, 50);
 
     }, 800);
