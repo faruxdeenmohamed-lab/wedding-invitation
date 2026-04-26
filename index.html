@@ -12,7 +12,7 @@
       font-family: Georgia, serif;
     }
 
-    /* COVER */
+    /* COVER PAGE */
     .cover {
       height: 100vh;
       background: url('images/cover.jpg') no-repeat center center;
@@ -57,7 +57,7 @@
       opacity: 0.8;
     }
 
-    /* INSIDE */
+    /* INSIDE PAGE */
     .invitation {
       display: none;
       height: 100vh;
@@ -80,7 +80,7 @@
       transform: scale(1);
     }
 
-    /* IMAGE */
+    /* FULL IMAGE */
     .inside-img {
       position: absolute;
       width: 100%;
@@ -88,10 +88,10 @@
       object-fit: cover;
     }
 
-    /* 🌙 BISMILLAH INSIDE IMAGE (FIXED POSITION) */
+    /* 🌙 BISMILLAH (UPDATED STYLE) */
     .bismillah-inside {
       position: absolute;
-      top: 12%;
+      top: 18%;
       left: 50%;
       transform: translateX(-50%);
 
@@ -99,11 +99,21 @@
       text-align: center;
 
       font-family: 'Amiri', serif;
-      font-size: clamp(28px, 4vw, 45px);
-      color: white;
+      font-size: clamp(40px, 5vw, 65px);
+      font-weight: bold;
+
+      color: #000;
 
       z-index: 2;
-      text-shadow: 0 5px 15px rgba(0,0,0,0.7);
+
+      /* thick black calligraphy effect */
+      text-shadow: 
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000;
+
+      letter-spacing: 1px;
     }
   </style>
 </head>
