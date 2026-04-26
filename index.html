@@ -161,7 +161,7 @@
       transform: translateY(0);
     }
 
-    /* DUA */
+    /* INSHALLAH */
     .dua {
       margin-top: 35px;
 
@@ -171,7 +171,7 @@
       color: #000;
     }
 
-    /* 📅 DATE BLOCK */
+    /* DATE */
     .date-block {
       margin-top: 30px;
       text-align: center;
@@ -194,25 +194,24 @@
       margin-top: 5px;
     }
 
-    .info-row {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
+    /* DAY + TIME BOX */
+    .info-box {
+      margin-top: 25px;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+    }
+
+    .info-line {
+      display: inline-block;
+      padding: 6px 30px;
+      margin: 8px 0;
 
       font-size: clamp(14px, 2vw, 22px);
-      letter-spacing: 2px;
       font-weight: bold;
-    }
+      letter-spacing: 2px;
 
-    .left {
-      text-align: left;
-    }
-
-    .right {
-      text-align: right;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
     }
   </style>
 </head>
@@ -282,9 +281,9 @@
           2026
         </div>
 
-        <div class="info-row">
-          <div class="left">MONDAY</div>
-          <div class="right">AT 11 AM</div>
+        <div class="info-box">
+          <div class="info-line">MONDAY</div><br>
+          <div class="info-line">AT 11 AM</div>
         </div>
 
       </div>
