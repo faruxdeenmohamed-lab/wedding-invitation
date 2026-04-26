@@ -171,7 +171,7 @@
       color: #000;
     }
 
-    /* DATE */
+    /* DATE BLOCK */
     .date-block {
       margin-top: 30px;
       text-align: center;
@@ -182,36 +182,29 @@
     .date-row {
       font-size: clamp(16px, 2vw, 26px);
       letter-spacing: 2px;
-      margin: 5px 0;
+      margin: 8px 0;
     }
 
-    .date-row span {
-      margin: 0 10px;
+    /* 🔥 CENTER ROW */
+    .center-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+
+      font-size: clamp(16px, 2vw, 26px);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .center-row span {
+      min-width: 120px;
+      text-align: center;
     }
 
     .year {
       font-size: clamp(18px, 2.2vw, 30px);
-      margin-top: 5px;
-    }
-
-    /* DAY + TIME BOX */
-    .info-box {
-      margin-top: 25px;
-      text-align: center;
-      font-family: 'Cinzel', serif;
-    }
-
-    .info-line {
-      display: inline-block;
-      padding: 6px 30px;
-      margin: 8px 0;
-
-      font-size: clamp(14px, 2vw, 22px);
-      font-weight: bold;
-      letter-spacing: 2px;
-
-      border-top: 2px solid #000;
-      border-bottom: 2px solid #000;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -273,17 +266,14 @@
           __________ AUG __________
         </div>
 
-        <div class="date-row">
-          __________ 10 __________
+        <div class="center-row">
+          <span>MONDAY</span>
+          <span>10</span>
+          <span>AT 11 AM</span>
         </div>
 
         <div class="year">
           2026
-        </div>
-
-        <div class="info-box">
-          <div class="info-line">MONDAY</div><br>
-          <div class="info-line">AT 11 AM</div>
         </div>
 
       </div>
