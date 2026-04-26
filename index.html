@@ -125,14 +125,22 @@
       color: #000;
     }
 
+    /* 🌸 WEDDING OF (SPACED WORDS) */
     .wedding-of {
-      margin-top: 20px;
+      margin-top: 35px;
 
       font-family: 'Great Vibes', cursive;
       font-size: clamp(45px, 6vw, 85px);
       font-weight: bold;
 
       color: #000;
+
+      letter-spacing: 0;
+    }
+
+    .wedding-of span {
+      display: inline-block;
+      margin: 0 20px; /* THIS creates space between WEDDING and OF */
     }
   </style>
 </head>
@@ -176,7 +184,7 @@
     </div>
 
     <div class="wedding-of">
-      WEDDING OF
+      <span>WEDDING</span><span>OF</span>
     </div>
 
   </div>
