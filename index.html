@@ -87,7 +87,7 @@
       object-fit: cover;
     }
 
-    /* TEXT BLOCK */
+    /* TEXT */
     .bismillah-inside {
       position: absolute;
       top: 18%;
@@ -136,20 +136,19 @@
       margin: 0 20px;
     }
 
-    /* ⭐ BIG ANIMATED NAMES */
+    /* NAME (NORMAL SIZE + ANIMATION ONLY) */
     .names {
-      margin-top: 35px;
+      margin-top: 25px;
 
       font-family: 'Great Vibes', cursive;
-      font-size: clamp(45px, 7vw, 100px); /* BIGGER */
-      line-height: 1.3;
+      font-size: clamp(28px, 4vw, 55px);
 
       text-align: center;
       color: #000;
 
       opacity: 0;
       transform: translateY(40px);
-      transition: all 1.5s ease;
+      transition: all 1.2s ease;
     }
 
     .names.show {
@@ -224,7 +223,6 @@
       setTimeout(() => {
         invite.classList.add("show");
 
-        // 🎯 animate names
         setTimeout(() => {
           document.querySelector(".names").classList.add("show");
         }, 800);
