@@ -93,7 +93,6 @@
       top: 18%;
       left: 50%;
       transform: translateX(-50%);
-
       width: 90%;
       text-align: center;
 
@@ -107,7 +106,6 @@
       font-size: clamp(14px, 2vw, 22px);
       letter-spacing: 2px;
       font-family: 'Cinzel', serif;
-      color: #000;
     }
 
     .invite-text {
@@ -115,7 +113,6 @@
       font-size: clamp(14px, 2.2vw, 26px);
       letter-spacing: 1px;
       font-family: 'Cinzel', serif;
-      color: #000;
     }
 
     .wedding-of {
@@ -124,44 +121,27 @@
       font-size: clamp(45px, 6vw, 85px);
       font-weight: 800;
       letter-spacing: 2px;
-      color: #000;
     }
 
     .wedding-of span {
       margin: 0 20px;
     }
 
-    /* NAMES */
-    .names {
-      margin-top: 25px;
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(32px, 4.5vw, 60px);
-      text-align: center;
-      color: #000;
-      line-height: 1.5;
-
+    /* ANIMATION */
+    .fade-up {
       opacity: 0;
-      transform: translateY(40px);
-      transition: all 1.2s ease;
+      transform: translateY(30px);
+      transition: all 1s ease;
     }
 
-    .names.show {
+    .fade-up.show {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* INSHALLAH BIGGER */
-    .dua {
-      margin-top: 45px;
-      font-family: 'Amiri', serif;
-      font-size: clamp(34px, 5vw, 60px);
-      color: #000;
-    }
-
-    /* DATE BIGGER */
+    /* DATE */
     .date-top {
       font-family: 'Cinzel', serif;
-      text-align: center;
       font-size: clamp(22px, 3vw, 40px);
       letter-spacing: 3px;
       margin-top: 25px;
@@ -182,7 +162,6 @@
 
     .middle {
       font-size: clamp(24px, 3.5vw, 45px);
-      font-weight: bold;
     }
 
     .side-box {
@@ -195,7 +174,6 @@
     .text {
       padding: 8px 12px;
       font-size: clamp(18px, 2.5vw, 30px);
-      text-align: center;
     }
 
     .line {
@@ -207,10 +185,25 @@
     }
 
     .year {
-      text-align: center;
       margin-top: 20px;
       font-size: clamp(22px, 3vw, 38px);
       font-family: 'Cinzel', serif;
+    }
+
+    /* INSHALLAH BIG */
+    .dua {
+      margin-top: 45px;
+      font-family: 'Amiri', serif;
+      font-size: clamp(34px, 5vw, 60px);
+    }
+
+    /* NAMES */
+    .names {
+      margin-top: 25px;
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(32px, 4.5vw, 60px);
+      text-align: center;
+      line-height: 1.5;
     }
 
   </style>
@@ -227,13 +220,8 @@
 
   <h1>Wedding Invitation</h1>
 
-  <div class="invite-line">
-    YOU ARE CORDIALLY INVITED
-  </div>
-
-  <div class="click-open">
-    Click to Open
-  </div>
+  <div class="invite-line">YOU ARE CORDIALLY INVITED</div>
+  <div class="click-open">Click to Open</div>
 
 </div>
 
@@ -246,32 +234,27 @@
 
     بِسْــــــــــــــــــمِ اﷲِالرَّحْمَنِ اارَّحِيم
 
-    <div class="english-line">
-      IN THE NAME OF ALLAH, THE MOST GRACIOUS, THE MOST MERCIFUL
-    </div>
+    <div class="english-line fade-up">IN THE NAME OF ALLAH, THE MOST GRACIOUS, THE MOST MERCIFUL</div>
 
-    <div class="invite-text">
+    <div class="invite-text fade-up">
       TOGETHER WITH OUR FAMILIES WE REQUEST THE HONOR OF YOUR PRESENCE AT THE
     </div>
 
-    <div class="wedding-of">
+    <div class="wedding-of fade-up">
       <span>WEDDING</span><span>OF</span>
     </div>
 
     <div class="names">
-      𝓜𝓞𝓗𝓐𝓜𝓔𝓓&nbsp;&nbsp;𝓐𝓝𝓐𝓢 <br>
-      ❤️ <br>
-      𝓢𝓐𝓕𝓔𝓔𝓡𝓐&nbsp;&nbsp;𝓢𝓘𝓜𝓐𝓜𝓐
 
-      <div class="dua">
-        إن شاء الله
-      </div>
+      <div class="fade-up">𝓜𝓞𝓗𝓐𝓜𝓔𝓓&nbsp;&nbsp;𝓐𝓝𝓐𝓢</div>
+      <div class="fade-up">❤️</div>
+      <div class="fade-up">𝓢𝓐𝓕𝓔𝓔𝓡𝓐&nbsp;&nbsp;𝓢𝓘𝓜𝓐𝓜𝓐</div>
 
-      <div class="date-top">
-        AUG
-      </div>
+      <div class="fade-up dua">إن شاء الله</div>
 
-      <div class="center-row">
+      <div class="fade-up date-top">AUG</div>
+
+      <div class="fade-up center-row">
 
         <div class="side-box">
           <div class="line"></div>
@@ -289,7 +272,7 @@
 
       </div>
 
-      <div class="year">2026</div>
+      <div class="fade-up year">2026</div>
 
     </div>
 
@@ -310,11 +293,15 @@
       setTimeout(() => {
         invite.classList.add("show");
 
-        setTimeout(() => {
-          document.querySelector(".names").classList.add("show");
-        }, 800);
+        let items = document.querySelectorAll(".fade-up");
 
-      }, 50);
+        items.forEach((el, i) => {
+          setTimeout(() => {
+            el.classList.add("show");
+          }, i * 350);
+        });
+
+      }, 100);
 
     }, 800);
   }
