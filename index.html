@@ -130,11 +130,8 @@
       font-size: clamp(45px, 6vw, 85px);
 
       color: #000;
-
       font-weight: 800;
       letter-spacing: 2px;
-
-      text-shadow: 0.5px 0.5px 0 #000;
     }
 
     .wedding-of span {
@@ -164,14 +161,58 @@
       transform: translateY(0);
     }
 
-    /* INSHALLAH */
+    /* DUA */
     .dua {
-      margin-top: 35px; /* SPACE increased */
+      margin-top: 35px;
 
       font-family: 'Amiri', serif;
-      font-size: clamp(26px, 3.5vw, 42px); /* BIGGER */
+      font-size: clamp(26px, 3.5vw, 42px);
 
       color: #000;
+    }
+
+    /* 📅 DATE BLOCK */
+    .date-block {
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      color: #000;
+    }
+
+    .date-row {
+      font-size: clamp(16px, 2vw, 26px);
+      letter-spacing: 2px;
+      margin: 5px 0;
+    }
+
+    .date-row span {
+      margin: 0 10px;
+    }
+
+    .year {
+      font-size: clamp(18px, 2.2vw, 30px);
+      margin-top: 5px;
+    }
+
+    .info-row {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: clamp(14px, 2vw, 22px);
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
     }
   </style>
 </head>
@@ -226,6 +267,28 @@
       <div class="dua">
         إن شاء الله
       </div>
+
+      <div class="date-block">
+
+        <div class="date-row">
+          __________ AUG __________
+        </div>
+
+        <div class="date-row">
+          __________ 10 __________
+        </div>
+
+        <div class="year">
+          2026
+        </div>
+
+        <div class="info-row">
+          <div class="left">MONDAY</div>
+          <div class="right">AT 11 AM</div>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
